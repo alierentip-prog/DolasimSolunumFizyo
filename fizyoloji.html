@@ -45,7 +45,7 @@
 
 <script>
     // --- SORU VERİTABANI BAŞLANGICI ---
-    const questions = [
+    var questions = [
         
         // --- PART 1: HÜCRE, KAS VE KALP ELEKTROFİZYOLOJİSİ (1-50) ---
         
@@ -7099,7 +7099,17 @@
         }
 
     ]; // DİZİ BURADA BİTTİ
+]; // --- SORU VERİTABANI BİTİŞİ ---
 
+    // --- SİHİRLİ TEMİZLİK KODU (BUNU BURAYA YAPIŞTIR) ---
+    // Bu kod, çift virgül yüzünden oluşan boşlukları otomatik siler.
+    questions = questions.filter(function(n) { return n != null });
+    
+    console.log("Hatalı virgüller temizlendi. Toplam Soru: " + questions.length);
+    // ----------------------------------------------------
+
+    // --- SİSTEM MANTIĞI (Buradan sonrası aynen kalsın) ---
+    let currentQuestionIndex = 0;
     // --- UYGULAMA MANTIĞI VE ÇALIŞTIRMA KODLARI ---
 
     let currentQuestionIndex = 0;
